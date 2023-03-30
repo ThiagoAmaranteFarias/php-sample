@@ -17,8 +17,7 @@ RUN cd /var/www/html
 
 RUN find /var/www/html -type f -exec chmod 664 {} \;    
 RUN find /var/www/html -type d -exec chmod 775 {} \;
-RUN chmod 0777 /env.php /init.sh /bin/artisan /bin/composer /bin/quickstart
-RUN chmod +x /usr/local/bin/wkhtmltoimage
+
 RUN export TERM=xterm
 EXPOSE 80
 WORKDIR /var/www/html
