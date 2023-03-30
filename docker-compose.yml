@@ -1,0 +1,11 @@
+version: '3'
+services:
+    php-teste:
+        build:
+            dockerfile: ./Dockerfile
+            context: .
+        container_name: php-teste
+        volumes:
+            - ./src:/var/www/html
+        ports:
+            - "80:80"
